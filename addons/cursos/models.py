@@ -11,3 +11,11 @@ class Cursos(models.Model):
 
 
 
+class Seccion(models.Model):
+    _name = 'cursos.seccion'
+
+    name = fields.Char(required=True, string="Nombre")
+    start_date = fields.Date(string="Fecha de início")
+    duration = fields.Float(digits=(6, 2), help="Duración en días")
+    seats = fields.Integer(string="Número de puestos")
+
