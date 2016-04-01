@@ -41,8 +41,15 @@
                         <group>
                             <field name="name"/>
                             <field name="instructor"/>
-                            <field name="description"/>
                         </group>
+                       <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="About">
+                                este es un ejemplo de notebook
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
