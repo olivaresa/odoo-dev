@@ -42,6 +42,7 @@
                         <group>
                             <field name="name"/>
                             <field name="instructor"/>
+                            <field name="responsible_id"/>
                         </group>
                        <notebook>
                             <page string="Description">

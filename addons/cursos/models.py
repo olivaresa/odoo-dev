@@ -8,7 +8,7 @@ class Cursos(models.Model):
     name = fields.Char(string="Nombre del curso", required=True)
     instructor = fields.Char(string="Instructor", required=True)
     description = fields.Text(string="Descripción del Curso")
-
+    responsible_id = fields.Many2one('res.users', ondelete='set null', string="Responsable", index=True)
 
 
 class Seccion(models.Model):
