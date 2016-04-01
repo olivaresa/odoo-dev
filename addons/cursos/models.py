@@ -22,3 +22,5 @@ class Seccion(models.Model):
     instructor_id = fields.Many2one('res.partner', string="Instructor")
     course_id = fields.Many2one('cursos.curso', ondelete='cascade', string="Curso", required=True)
 
+    attendee_ids = fields.Many2many('res.partner', string="Attendees")
+
