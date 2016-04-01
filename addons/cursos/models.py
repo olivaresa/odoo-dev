@@ -9,6 +9,7 @@ class Cursos(models.Model):
     description = fields.Text(string="Descripción del Curso")
     responsible_id = fields.Many2one('res.users', ondelete='set null', string="Responsable", index=True)
 
+    session_ids = fields.One2many('cursos.seccion', 'course_id', string="Secciones")
 
 class Seccion(models.Model):
     _name = 'cursos.seccion'
