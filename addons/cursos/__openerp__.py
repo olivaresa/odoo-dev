@@ -33,6 +33,6 @@
     #],
     
     #'installable': True,
-    #'application': True,
+    'application': True,
 
 }
