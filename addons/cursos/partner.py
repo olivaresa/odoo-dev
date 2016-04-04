@@ -9,4 +9,4 @@ class Partner(models.Model):
     instructor = fields.Boolean("Instructor", default=False)
 
     session_ids = fields.Many2many('cursos.seccion',
-        string="Attended Sessions", readonly=True)
+        string="Secciones asistidas", readonly=True)

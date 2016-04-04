@@ -19,7 +19,11 @@ class Seccion(models.Model):
     duration = fields.Float(digits=(6, 2), help="Duración en días", string="Duración")
     seats = fields.Integer(string="Número de puestos")
 
-    instructor_id = fields.Many2one('res.partner', string="Instructor")
+    instructor_id = fields.Many2one('res.partner', string="Instructor", 
+                    domain=['|', ('instructor', '=', True),
+                    ('category_id.name', 'ilike', "Profesor")]
+        )
+
     course_id = fields.Many2one('cursos.curso', ondelete='cascade', string="Curso", required=True)
 
     attendee_ids = fields.Many2many('res.partner', string="Attendees")
