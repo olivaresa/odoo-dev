@@ -15,10 +15,11 @@ class Seccion(models.Model):
     _name = 'cursos.seccion'
 
     name = fields.Char(required=True, string="Nombre")
-    start_date = fields.Date(string="Fecha de início")
+    start_date = fields.Date(string="Fecha de início", default=fields.Date.today)
     duration = fields.Float(digits=(6, 2), help="Duración en días", string="Duración")
     seats = fields.Integer(string="Número de puestos")
-
+    active = fields.Boolean(default=True)
+    
     instructor_id = fields.Many2one('res.partner', string="Instructor", 
                     domain=['|', ('instructor', '=', True),
                     ('category_id.name', 'ilike', "Profesor")]
